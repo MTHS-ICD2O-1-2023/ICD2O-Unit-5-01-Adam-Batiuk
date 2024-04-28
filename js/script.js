@@ -4,15 +4,19 @@
 // Created on: Mar 2024
 // This file contains the JS functions for index.html
 
-const sidea = parseInt(document.getElementById("side-a").val
+const randomNumber = Math.floor(Math.random() * 6) + 1
 
 function myButtonClicked() {
-  // Define the lengths of the three sides of a triangle
-  if ($area !== $area) {
-    document.getElementById("answer").innerHTML = "Area is not a number"
+  // input
+  const userNumber = parseInt(document.getElementById("user-number").value)
+  
+  // process
+  if (userNumber == randomNumber) {
+    // output
+    document.getElementById("answer").innerHTML = "You have guessed the correct number!"
   }
-  else {
-    document.getElementById("answer").innerHTML = "Area is: " + roundArea + " cm²"
+
+  if (userNumber != randomNumber) {
+    document.getElementById("answer").innerHTML = "You have not guessed the correst number!"
   }
-  document.getElementById("perimeter").innerHTML = "Perimeter is: " + perimeter + " cm"
 }
